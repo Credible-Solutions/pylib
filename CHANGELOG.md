@@ -2,6 +2,15 @@
 
 
 
+## v0.2.1 (2024-05-30)
+
+### Unknown
+
+* Merge pull request #1 from PyCloudWorld/fix/ci_pipeline_naming
+
+fix: setting the naming correctly in CI Pipeline ([`ad46790`](https://github.com/PyCloudWorld/pylib/commit/ad46790c1ebbaad189b7f00a122564c2efcbd06f))
+
+
 ## v0.2.1-beta.1 (2024-05-30)
 
 ### Fix
