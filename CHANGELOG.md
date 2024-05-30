@@ -2,6 +2,17 @@
 
 
 
+## v0.2.2-beta.1 (2024-05-30)
+
+### Fix
+
+* fix: lint &amp; ci &amp; dependency ([`6b7d610`](https://github.com/PyCloudWorld/pylib/commit/6b7d610a73a4cae7ca8e47c66df6489e9f84c1fb))
+
+### Test
+
+* test: adding test cases ([`47ef4f3`](https://github.com/PyCloudWorld/pylib/commit/47ef4f3f6035078ad302b51bf7def1ba51eb9c46))
+
+
 ## v0.2.1 (2024-05-30)
 
 ### Unknown
