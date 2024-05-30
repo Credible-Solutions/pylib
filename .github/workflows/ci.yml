@@ -25,10 +25,10 @@ jobs:
             fetch-depth: 0
             ref: ${{ github.head_ref || github.ref_name }}
             token: ${{ secrets.GH_TOKEN }}
-            
+
       - uses: actions/setup-python@v5
         with:
-            python-version: '3.12' 
+            python-version: '3.12'
       - name: install poetry
         shell: bash
         run: pip install poetry
@@ -36,6 +36,18 @@ jobs:
       - name: Install all relevant packages
         shell: bash
         run: poetry install
+
+      - name: Lint (flake8, black, isort)
+        shell: bash
+        run: |
+          poetry run flake8 .
+          poetry run black .
+          poetry run isort .
+
+      - name: Test with pytest (unit)
+        run: |
+          poetry run python -m pytest tests/unit/*
+        #   poetry run python -m pytest tests/unit/* --cov=avc --cov-report=xml:coverage.xml --junitxml=junit/test-unit-results.xml
 
       - name: Set git user for semantic release
         run: |
