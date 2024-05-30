@@ -2,6 +2,13 @@
 
 
 
+## v0.2.1-beta.1 (2024-05-30)
+
+### Fix
+
+* fix: setting the naming correctly in CI Pipeline ([`29deb16`](https://github.com/PyCloudWorld/pylib/commit/29deb16c70263e6906d050b4441b0b2569c1d3bf))
+
+
 ## v0.2.0 (2024-05-30)
 
 ### Feature
