@@ -2,6 +2,15 @@
 
 
 
+## v0.2.2 (2024-05-30)
+
+### Unknown
+
+* Merge pull request #2 from PyCloudWorld/fix/lint_and_documentation
+
+fix: lint &amp; ci &amp; dependency ([`583d378`](https://github.com/PyCloudWorld/pylib/commit/583d3789537ba7e9486161177bd22563b43b45c5))
+
+
 ## v0.2.2-beta.1 (2024-05-30)
 
 ### Fix
