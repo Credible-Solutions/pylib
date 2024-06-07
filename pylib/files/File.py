@@ -1,5 +1,5 @@
-import os
 import logging
+import os
 
 
 class File:
@@ -20,8 +20,8 @@ class File:
 
     def __init__(self, filepath):
         self.filepath = filepath
-    
-    def exists(self)->bool:
+
+    def exists(self) -> bool:
         """
         Checks if the file exists.
 
@@ -31,8 +31,8 @@ class File:
         """
         logging.debug(f"Checking if file exists: {self.filepath}")
         return os.path.exists(self.filepath)
-    
-    def readlines(self, bypass_errors = True)->list:
+
+    def readlines(self, bypass_errors=True) -> list:
         """
         Reads all lines from the file.
 
@@ -46,6 +46,6 @@ class File:
                 logging.warning("Bypassing errors and returning an empty list")
                 return []
             raise FileNotFoundError(f"File not found: {self.filepath}")
-        with open(self.filepath, 'r') as f:
+        with open(self.filepath, "r") as f:
             logging.debug(f"Reading lines from file: {self.filepath}")
             return f.readlines()

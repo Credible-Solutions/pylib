@@ -1,13 +1,15 @@
-import os
 import logging
+import os
+
 from pylib.files.File import File
+
 
 class EnvFile(File):
     def __init__(self, filepath: str):
         logging.debug(f"Creating EnvFile object with filepath: {filepath}")
         super().__init__(filepath)
 
-    def set_env_variabes(self, bypass_errors = True)->int:
+    def set_env_variabes(self, bypass_errors=True) -> int:
         """
         Sets environment variables based on the contents of the file.
 
@@ -23,20 +25,21 @@ class EnvFile(File):
             int: 0 if the method doesn't set any value.
         """
         count = 0
-        lines  = self.readlines(bypass_errors = True)
+        lines = self.readlines(bypass_errors=True)
         for line in lines:
             logging.debug(f"Processing line: {line}")
             line = line.strip()
-            if line.startswith('#') or not line or '=' not in line:
+            if line.startswith("#") or not line or "=" not in line:
                 continue
-            key, value = line.split('=', 1)
+            key, value = line.split("=", 1)
             logging.debug(f"Setting environment variable: {key}={value}")
             os.environ[key] = value
             count += 1
         logging.debug(f"Set {count} environment variables")
         return count
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print("11")
-    env_file = EnvFile(filepath = '.env')
-    print(env_file.set_env_variabes(bypass_errors = True))
+    env_file = EnvFile(filepath=".env")
+    print(env_file.set_env_variabes(bypass_errors=True))

@@ -1,6 +1,8 @@
 import os
 from unittest import mock
+
 from pylib.files.EnvFile import EnvFile
+
 
 def test_set_env_variables():
     # Create a mock file object
