@@ -2,6 +2,15 @@
 
 
 
+## v0.3.0 (2024-06-07)
+
+### Unknown
+
+* Merge pull request #3 from Credible-Solutions/feat/set_variable_by_env_file
+
+feat: env file set environment variable added ([`ff91f3b`](https://github.com/Credible-Solutions/pylib/commit/ff91f3b6c634145a95fce44796701a02eedb85f7))
+
+
 ## v0.3.0-beta.1 (2024-06-07)
 
 ### Chore
